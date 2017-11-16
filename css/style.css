@@ -4,6 +4,20 @@ body{
     color: #242424;
 }
 
+h1{
+    margin: 90px 0 0 0;
+    font-size: 62px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.br_10{
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
 a:hover, a:active{
     text-decoration: none;
 }
@@ -18,10 +32,12 @@ a, button{
 
 header{
     padding: 20px 0 0 0;
+    position: absolute;
     background: rgba(0, 89, 148,.87);
     color: #fff;
     font-weight: 100;
     min-height: 115px;
+    width: 100%;
 }
 
 .logo a{
@@ -95,3 +111,76 @@ header{
 .btn i{
     margin-right: 10px;
 }
+
+#promo{
+    padding: 235px 0 120px 0;
+    background: url('../img/temp/promo_bg.png')no-repeat;
+}
+
+.sub_title{
+    font-size: 30px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.sub_title span{
+    background-color: #80c102;
+    padding: 0 4px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.zapis{
+    background: #fff;
+    padding: 45px;
+    margin: 0 5%;
+    font-weight: 100;
+    font-size: 18px;
+    color: #000;
+}
+
+.zapis h3{
+    font-size: 32px;
+    text-align: center;
+    color: #80c102;
+    margin: 0 0 30px 0;
+}
+
+.zapis ul{
+    margin-bottom: 35px;
+}
+
+.zapis form{
+    text-align: center;
+}
+
+.zapis input{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.check_ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+}
+
+.check_ul i{
+    color: #80c102;
+    margin-right: 15px;
+}
+
+.input_text{
+    padding: 8px;
+    background: #fbfbfb;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+
