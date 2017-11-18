@@ -43,6 +43,14 @@ jQuery(document).ready(function ($) {
   		padding: '300px'
 	});
 
+  $(".scroll").mCustomScrollbar({
+    axis:"y",
+    setHeight: $('.set_plan').height() + 30,
+            scrollButtons:{
+          enable:true
+        }
+  });
+
   $( "#slider-range" ).slider({
       range: true,
       min: 0,
