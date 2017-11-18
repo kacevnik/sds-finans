@@ -16,15 +16,6 @@ jQuery(document).ready(function ($) {
 	});
 
 
-    //Кастомные табы
-
-    $('#vibor_1 .item a').click(function(event) {
-      $('#vibor_1 .item').removeClass('activ');
-      $(this).parent().addClass('activ');
-      $('#vibor_2 .tabs').hide();
-      $('#vibor_2 #' + $(this).parent().attr('data-tab')).fadeIn(300);
-      return false;
-    });
 
     //Иницилизация и настройка Галереи-Слайдера OWL-carusel
     $("#slider_owl_1").owlCarousel({
@@ -36,34 +27,6 @@ jQuery(document).ready(function ($) {
       nav:true,
       navText: ['<div class="arrow_prev_owl"></div>', '<div class="arrow_next_owl"></div>']
     });     
-
-    $("#slider_owl_2").owlCarousel({
-      items : 1,
-      loop:true,
-      autoplaySpeed:1200,
-      navSpeed:1200,
-      autoplay:5000,
-      nav:true,
-      navText: ['<div class="arrow_prev_owl"></div>', '<div class="arrow_next_owl"></div>']
-    });     
-
-    $("#slider_owl_3").owlCarousel({
-      items : 1,
-      loop:true,
-      autoplaySpeed:1200,
-      navSpeed:1200,
-      autoplay:5000,
-      nav:true,
-      navText: ['<div class="arrow_prev_owl"></div>', '<div class="arrow_next_owl"></div>']
-    }); 
-
-    $('#slider_owl_3 .arrow_next_owl').on('click', function(event) {
-      $('#slider_owl_2 .arrow_next_owl').trigger('click');
-    });    
-
-    $('#slider_owl_3 .arrow_prev_owl').on('click', function(event) {
-      $('#slider_owl_2 .arrow_prev_owl').trigger('click');
-    });
 
   	//Плавная прокрутка
   $("a[href*='#']").bind("click", function(e){
@@ -80,6 +43,19 @@ jQuery(document).ready(function ($) {
   		padding: '300px'
 	});
 
+  $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 5000000,
+      step: 1000,
+      values: [ 1000000, 2500000 ],
+      slide: function( event, ui ) {
+        $( "#slider_price_left" ).html('от ' + ui.values[ 0 ]);
+        $( "#slider_price_right" ).html('до ' + ui.values[ 1 ]);
+      }
+    });
+    $( "#slider_price_left" ).html('от ' + $( "#slider-range" ).slider( "values", 0 ));
+    $( "#slider_price_right" ).html('до ' + $( "#slider-range" ).slider( "values", 1 ));
 
   	//Маска под телефонный номер для поля Input
   	$('input[name="phone"]').mask("+7 (999) 999-99-99"); 	
@@ -104,34 +80,6 @@ jQuery(document).ready(function ($) {
   		else{
   			$('#more').attr('data_ok', '');
   		}
-  	});
-
-
-  	$('a.link').click(function(event) {
-  		var step = $(this).attr('data_to').split('_')[1];
-  		var name = {2:'Выберите тип топлива?', 3:'Укажите площадь дома?', 4:'Оставьте свои контакты?', 5:'Заявка принята!'};
-	  	if($('#more').attr('data_ok') == 'ok'){
-	  		$('#select .answer ul li[data-activ='+step+']').addClass('activ');
-
-	  		$('.select_body_show').hide();
-	  		$('#step_' + step).show();
-	  		$('.link').attr('data_to', 'step_' + (step*1 + 1));
-
-	  		$('#more').attr('data_ok', '');
-	  		$(this).blur();
-	  		$(this).next().hide();
-	  		$('#select_body h2').html(name[step]);
-
-	  		if(step == 4){
-	  			$(this).hide();
-	  			$('#select_body input[name="submit"]').show();
-	  		}	  		
-
-	  		if(step == 5){
-	  			$('#select_body input[name="submit"]').hide();
-	  		}
-	  	}
-  		return false;
   	});
 
 });

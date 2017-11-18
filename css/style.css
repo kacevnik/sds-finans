@@ -7,8 +7,14 @@ body{
 h1{
     margin: 90px 0 0 0;
     font-size: 62px;
-    font-weight: 500;
+    font-weight: 300;
     color: #fff;
+}
+
+h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 36px;
 }
 
 .br_10{
@@ -183,4 +189,127 @@ header{
     -webkit-border-radius: 2px;
 }
 
+#plan{
+    background: #fff;
+    padding: 70px 0;
+}
+
+#plan h2{
+    margin-bottom: 40px;
+}
+
+.set_plan{
+    border: 1px solid #e5e5e5;
+}
+
+.set_plan .item{
+    border-bottom: 1px solid #e5e5e5;
+    padding: 40px;
+}
+
+.set_plan .item:last-child{
+    border-bottom: none;
+}
+
+.set_plan .title{
+    font-weight: 100;
+    font-size: 22px;
+    margin: 0 0 25px 0;
+}
+
+.count_area span{
+    width: 45px;
+    height: 35px;
+    margin: 0 10px 0 0;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    color: #cbcbcb;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.count_area span.active, .count_area span:hover{
+    color: #fff;
+    background: #80c102;
+    border: 1px solid #80c102;
+}
+
+.check_sqd span{
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+.check_sqd{
+    overflow: hidden;
+}
+
+.check_sqd label{
+    font-size: 18px;
+    font-weight: 100;
+    padding: 0 0 0 10px;
+}
+
+#slider_price_left, #slider_price_right{
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 15px 0 0 0;
+    font-weight: 100;
+}
+
+.price{
+    overflow: hidden;
+}
+
+#slider_price_left{
+    text-align: left;
+}
+
+#slider_price_right{
+    text-align: right;
+}
+
+.price .ui-state-default{
+    background: rgb(128, 193, 2);
+    border-radius: 50%;
+    border: 1px solid rgb(128, 193, 2);
+    cursor: pointer;
+}
+
+.price .ui-state-default:focus{
+    outline: none;
+}
+
+.price .ui-slider-horizontal {
+    height: .5em;
+}
+
+.manager{
+    text-align: center;
+}
+
+.manager img{
+    border-radius: 50%;
+    width: 80%;
+    border: 7px solid #80c102;
+    margin-bottom: 20px;
+}
+
+.manager .title{
+    color: #005286;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.manager .manager_text{
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+ 
 
