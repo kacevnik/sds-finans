@@ -24,6 +24,20 @@ h2{
     -webkit-border-radius: 10px;
 }
 
+.br_5{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.br_2{
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
 a:hover, a:active{
     text-decoration: none;
 }
@@ -98,10 +112,6 @@ header{
     padding: 8px 20px;
     display: inline-block;
     cursor: pointer;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    -webkit-border-radius: 2px;
 }
 
 .btn:hover{
@@ -383,6 +393,61 @@ header{
     font-size: 22px;
     margin-bottom: 40px;
     padding: 50px 0 0 0;
+}
+
+.btn_med{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+#infra{
+    background: #fff;
+    padding: 70px 0;
+}
+
+#infra h2{
+    margin-bottom: 50px;
+}
+
+.infra_sub_title{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.img_body{
+    margin-bottom: 30px;
+}
+
+.img_body img{
+    width: 100%;
+}
+
+#infra .item span{
+    display: block;
+    margin: 15px 0 0 0;
+    padding: 13px 0 0 85px;
+    min-height: 75px;
+    background: url(../img/temp/infra_ico.png)no-repeat;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#infra .item span.infra_ico_1{
+    background-position: 0 0px;
+}
+
+#infra .item span.infra_ico_2{
+    background-position: 0 -75px;
+}
+
+#infra .item span.infra_ico_3{
+    background-position: 0 -150px;
+}
+
+#infra .item span.infra_ico_4{
+    background-position: 0 -225px;
 }
  
 
