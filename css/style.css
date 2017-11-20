@@ -17,6 +17,14 @@ h2{
     font-size: 36px;
 }
 
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
 .br_10{
     border-radius: 10px;
     -moz-border-radius: 10px;
@@ -709,4 +717,82 @@ header{
     font-size: 20px;
     display: inline-block;
 }
+
+#map_block{
+    background: #fff;
+    padding: 70px 0 0 0;
+    text-align: center;
+    position: relative;
+}
+
+#map_block h2{
+    margin-bottom: 13px
+}
+
+.map_sub_title{
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+#map{
+    height: 480px;
+}
+
+.map_zapis{
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+}
+
+.top_footer .logo a {
+    position: inherit;
+    margin: 30px 0;
+    line-height: 0;
+    height: auto;
+}
+
+.top_footer .top_menu {
+    margin: 16px 0 0 0;
+}
+
+.top_footer .top_menu li a{
+    color: #242424;
+    font-weight: 300;
+}
+
+.top_footer .top_menu li a:hover{
+    color: #30c102;
+}
+
+.top_footer .top_phone{
+    margin: 15px 0 0 0;
+}
+
+.top_footer .top_phone span{
+    color: #0067ad;
+}
+
+.top_footer .call_back{
+    margin: 20px 0 0 0;
+}
+
+.bottom_footer{
+    padding: 15px 0;
+    background: #f7f7f7;
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.bottom_footer a{
+    color: #a3a3a3;
+}
+
+.bottom_footer a:hover{
+    text-decoration: underline;
+}
+
+
+
 

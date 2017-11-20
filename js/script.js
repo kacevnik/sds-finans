@@ -103,4 +103,40 @@ jQuery(document).ready(function ($) {
 
     $('#dg-container').gallery();
 
+    ymaps.ready(init);
+ 
+function init () {
+    var myMap = new ymaps.Map("map", {
+        // Центр карты, указываем коордианты
+        center:[55.014652,82.884050],
+        // Масштаб, тут все просто
+        zoom: 16,
+    }); 
+             
+    var myGeoObjects = [];
+     
+    // Наша метка, указываем коордианты
+    myGeoObjects = new ymaps.Placemark([55.016063,82.890219],{
+                    balloonContentBody: 'Текст в балуне',
+                    },{
+                    iconLayout: 'default#image',
+                    // Путь до нашей картинки
+                    iconImageHref: 'img/temp/logo_for_map.png', 
+                    // Размер по ширине и высоте
+                    iconImageSize: [200, 131],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её «ножки» (точки привязки).
+                    iconImageOffset: [-35, -35]
+    });
+                 
+    var clusterer = new ymaps.Clusterer({
+        clusterDisableClickZoom: false,
+        clusterOpenBalloonOnClick: false,
+    });
+     
+    clusterer.add(myGeoObjects);
+    myMap.geoObjects.add(clusterer);
+ 
+}
+
 });
