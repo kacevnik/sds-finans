@@ -512,3 +512,111 @@ header{
     display: inline-block;
 }
 
+#ipoteka{
+    padding: 70px 0;
+    text-align: center;
+    background: #fff;
+    background: #fff url(../img/temp/bank_bg.png)no-repeat top left;
+    background-size: 30%;
+}
+#ipoteka h2{
+    margin-bottom: 50px;
+}
+
+.ipoteka_sub_title{
+    font-size: 22px;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.ipoteka_sub_title_big{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.ipoteka_arrow{
+    font-size: 30px;
+    color: #30c102;
+    margin-bottom: 40px;
+}
+
+.ipoteka_arrow i{
+    margin-right: 70px;
+}
+
+.ipoteka_arrow i:last-child{
+    margin: 0;
+}
+
+.ipoteka_form input[type="text"]{
+    font-weight: 100;
+    width: 90%;
+    padding: 10px 0 10px 8px;
+    margin-bottom: 15px;
+}
+
+.ipoteka_form input[type="text"]:focus{
+    border: 1px solid #afafaf;
+    outline: none;
+}
+
+.ipoteka_form select{
+    font-weight: 100;
+    width: 90%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.ipoteka_form input[type="submit"]{
+    margin-top: 30px;
+}
+
+#bank_slider{
+    margin-bottom: 40px;
+}
+
+#bank_slider .item{
+    border: 1px solid #e5e5e5;
+    height: 120px;
+    padding: 0 30px;
+    text-align: center;
+    background: #fff;
+}
+
+#bank_slider .item img{
+    height: 100%;
+    width: auto;
+    margin: auto;
+}
+
+ #bank_slider.owl-carousel .owl-nav.disabled {
+    display: block;
+}
+
+ #bank_slider .arrow_prev_owl,  #bank_slider .arrow_next_owl{
+    position: absolute;
+    top: 40px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #30c102;
+    border-radius: 50%;
+    color: #30c102;
+    font-size: 30px;
+    text-align: center;
+    line-height: 39px;
+    cursor: pointer;
+ } 
+
+ #bank_slider .arrow_prev_owl:hover,  #bank_slider .arrow_next_owl:hover{
+    color: #fff;
+    background: #30c102;
+ }
+
+  #bank_slider .arrow_prev_owl{
+    left: -70px;
+  }
+
+  #bank_slider .arrow_next_owl{
+    right: -70px;
+  }
+

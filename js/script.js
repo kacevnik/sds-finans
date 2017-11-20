@@ -18,14 +18,25 @@ jQuery(document).ready(function ($) {
 
 
     //Иницилизация и настройка Галереи-Слайдера OWL-carusel
-    $("#slider_owl_1").owlCarousel({
-      items : 1,
+    $("#bank_slider").owlCarousel({
+      nav:true,
       loop:true,
       autoplaySpeed:1200,
       navSpeed:1200,
       autoplay:5000,
-      nav:true,
-      navText: ['<div class="arrow_prev_owl"></div>', '<div class="arrow_next_owl"></div>']
+      margin: 20,
+      responsive:{
+        0:{
+            items:1
+        },       
+        630:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+      },
+      navText: ['<div class="arrow_prev_owl"><i class="fa fa-angle-left"></i></div>', '<div class="arrow_next_owl"><i class="fa fa-angle-right"></div>']
     });     
 
   	//Плавная прокрутка
