@@ -589,11 +589,11 @@ header{
     margin: auto;
 }
 
- #bank_slider.owl-carousel .owl-nav.disabled {
+#bank_slider.owl-carousel .owl-nav.disabled {
     display: block;
 }
 
- #bank_slider .arrow_prev_owl,  #bank_slider .arrow_next_owl{
+#bank_slider .arrow_prev_owl,  #bank_slider .arrow_next_owl{
     position: absolute;
     top: 40px;
     width: 45px;
@@ -605,18 +605,108 @@ header{
     text-align: center;
     line-height: 39px;
     cursor: pointer;
- } 
+} 
 
- #bank_slider .arrow_prev_owl:hover,  #bank_slider .arrow_next_owl:hover{
+#bank_slider .arrow_prev_owl:hover,  #bank_slider .arrow_next_owl:hover{
     color: #fff;
     background: #30c102;
- }
+}
 
-  #bank_slider .arrow_prev_owl{
+#bank_slider .arrow_prev_owl{
     left: -70px;
-  }
+}
 
-  #bank_slider .arrow_next_owl{
+#bank_slider .arrow_next_owl{
     right: -70px;
-  }
+}
+
+#info{
+    padding: 70px 0;
+    background: url('../img/temp/info_bg.png');
+    background-size: cover;
+}  
+
+#info h2{
+    margin-bottom: 50px;
+}
+
+.project_img{
+    text-align: center;
+}
+
+.project_img img{
+    width: 55%;
+    margin-bottom: 20px;
+}
+
+.project_img a{
+    width: 55%;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    margin: 0 auto 15px;
+}
+
+.project_img a img{
+    width: 100%;
+    margin: 0;
+}
+
+.project_img .fon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    top: 0;
+    cursor: pointer;
+}
+
+.project_img .fon i{
+    color: #fff;
+    font-size: 60px;
+    margin: auto;
+    margin-top: 44%;
+    cursor: pointer;
+}
+
+.project_img a:hover .fon{
+    display: block;
+}
+
+.project_img span{
+    font-size: 10px;
+    display: block;
+    font-weight: 300;
+}
+
+.info_sub_title{
+    font-size: 26px;
+    color: #0067ad;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+#info ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#info ul li{
+    margin-bottom: 40px;
+}
+
+#info .item_title{
+    font-weight: 300;
+    font-size: 24px;
+    color: #30c102;
+}
+
+#info .item_body{
+    padding: 0 0 0 34px;
+    font-weight: 100;
+    font-size: 20px;
+    display: inline-block;
+}
 
