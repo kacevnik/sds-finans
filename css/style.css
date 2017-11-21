@@ -388,8 +388,13 @@ header{
 }
 
 #presentation{
-   padding: 70px 0 0 0;
+   padding: 70px 0 70px 0;
    background: url('../img/temp/presentation_bg.png')no-repeat;
+   background-size: cover;
+}
+
+#presentation img{
+   width: 100%;
 }
 
 #presentation h2{
@@ -411,6 +416,10 @@ header{
 #infra{
     background: #fff;
     padding: 70px 0;
+}
+
+#infra .item img{
+    width: 100%;
 }
 
 #infra h2{
