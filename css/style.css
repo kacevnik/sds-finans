@@ -17,6 +17,10 @@ h2{
     font-size: 36px;
 }
 
+.green{
+    color: #30c102;
+}
+
 .left{
     text-align: left;
 }
@@ -198,6 +202,7 @@ header{
 }
 
 .input_text{
+    font-weight: 300;
     padding: 8px;
     background: #fbfbfb;
     border: 1px solid #eaeaea;
@@ -800,6 +805,44 @@ header{
 
 .bottom_footer a:hover{
     text-decoration: underline;
+}
+
+.popup{
+    display: none;
+    text-align: center;
+}
+
+.popup h4{
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+#call_back_popup{
+    width: 320px;
+}
+
+#call_back_popup input{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+
+#select{
+    width: 320px;
+}
+
+#select input{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#session{
+    width: 320px;
+}
+
+#session input{
+    width: 80%;
+    margin-bottom: 20px;
 }
 
 

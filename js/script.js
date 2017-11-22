@@ -6,13 +6,7 @@ jQuery(document).ready(function ($) {
 		//$("a[title='Close']").trigger("click");
 		$('form').clearForm();
 		$(".fancybox-close-small").trigger("click");
-    $("a[title='thanks']").trigger("click");
-    if($('input[name="submit"]').val() == 'Получить расчет'){
-      $('#select_body h2').html('Заявка принята!');
-      $('#select_body input[name="submit"]').hide();
-      $('#step_5').show();
-      $('#step_4').hide();
-    }
+    $("#thanks_link").trigger("click");
 	});
 
 
@@ -71,10 +65,12 @@ jQuery(document).ready(function ($) {
       slide: function( event, ui ) {
         $( "#slider_price_left" ).html('от ' + ui.values[ 0 ]);
         $( "#slider_price_right" ).html('до ' + ui.values[ 1 ]);
+        $('#select input[name="price"]').val('от ' + ui.values[ 0 ] + ' до ' + ui.values[ 1 ]);
       }
     });
     $( "#slider_price_left" ).html('от ' + $( "#slider-range" ).slider( "values", 0 ));
     $( "#slider_price_right" ).html('до ' + $( "#slider-range" ).slider( "values", 1 ));
+    $('#select input[name="price"]').val('от ' + $( "#slider-range" ).slider( "values", 0 ) + ' до ' + $( "#slider-range" ).slider( "values", 1 ));
 
   	//Маска под телефонный номер для поля Input
   	$('input[name="phone"]').mask("+7 (999) 999-99-99"); 	
@@ -138,5 +134,22 @@ function init () {
     myMap.geoObjects.add(clusterer);
  
 }
+
+  $('.count_area span').click(function(event) {
+    $('.count_area span').removeClass('active');
+    $(this).addClass('active');
+    $('#select input[name="count_area"]').val($(this).html());
+  });
+
+  $('.check_sqd input[type="checkbox"]').click(function(event) {
+    var text = '';
+    $('.check_sqd input[type="checkbox"]').each(function(index, el) {
+      if($(this).prop("checked")){
+        text = text + $('label[for="' + $(this).attr('id') + '"]').html() + ' ';
+
+      }
+      $('#select input[name="sqd"]').val(text);
+    });
+  });
 
 });

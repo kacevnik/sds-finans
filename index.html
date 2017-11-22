@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="col-md-3 call_back_container">
-            <a href="" class="call_back btn br_2">
+            <a data-fancybox data-src="#call_back_popup" href="javascript:;" class="call_back btn br_2">
               <i class="fa fa-phone" aria-hidden="true"></i>
               Заказать звонок
             </a>
@@ -103,7 +103,7 @@
               <div class="item sqd">
                 <div class="title">Метраж квартиры</div>
                 <div class="check_sqd">
-                  <form method="post" action="send.php">
+                  <form action="">
                     <span>
                       <input type="checkbox" id="check_sqd_100" value="100">
                       <label for="check_sqd_100">100 м<sup>2</sup></label><br>
@@ -133,8 +133,7 @@
                 </div>
                 <div class="title">Станислав<br>Эксперт ЖК «Венеция»</div>
                 <div class="manager_text">Нажмите на кнопку и эксперт проекта за 25 минут бесплатно подберет вам 2-5 подходящих жилых комплекса</div>
-                <input type="hidden" value="1" name="count_area">
-                <input type="submit" name="submit" class="btn" value="Подобрать вариант">
+                <a class="btn" data-fancybox data-src="#select" href="javascript:;">Подобрать вариант</a>
               </form>
               </div>
             </div>
@@ -334,7 +333,7 @@
           </div>
         </div>
         <div class="ecspo_slider_footer">
-          <a href="" class="btn btn_med">Записаться на экскурсию</a>
+          <a data-fancybox data-src="#session" href="javascript:;" class="btn btn_med">Записаться на экскурсию</a>
           <div class="ecspo_slider_title">Посетите стройплощадку и шоурум с 3-мя вариантами ремонта</div>
         </div>
       </div>
@@ -361,7 +360,7 @@
             <i class="fa fa-arrow-down"></i>
           </div>
           <div class="ipoteka_form">
-            <form action="">
+            <form action="send.php" method="post">
               <div class="col-md-3">
                 <input type="text" placeholder="Желаемая сумма" name="summa" required="" class="input_text">
               </div>
@@ -456,7 +455,7 @@
         
       </div>
       <div class="map_zapis">
-          <a href="" class="btn btn_med">Записаться на экскурсию</a>
+          <a data-fancybox data-src="#session" href="javascript:;" class="btn btn_med">Записаться на экскурсию</a>
       </div>
     </section>
     <footer>
@@ -491,7 +490,7 @@
             </div>
           </div>
           <div class="col-md-3 call_back_container">
-            <a href="" class="call_back btn br_2">
+            <a data-fancybox data-src="#call_back_popup" href="javascript:;" class="call_back btn br_2">
               <i class="fa fa-phone" aria-hidden="true"></i>
               Заказать звонок
             </a>
@@ -512,6 +511,46 @@
         </div>
       </div>
     </footer>
+    <!--**** PopUp ********-->
+    <div class="popup br_10" id="call_back_popup">
+      <h4>Укажите телефон<br> и мы Вам<br> перезвоним</h4>
+      <form action="send.php" method="post">
+        <input type="text" name="phone" placeholder="Номер телефона" class="input_text">
+        <input type="hidden" name="form" value="Перезвоните мне!">
+        <input type="submit" class="btn" value="Отправить" name="submit">
+      </form>
+    </div>
+
+    <a data-fancybox data-src="#thanks" href="javascript:;" style="display: none;" id="thanks_link">Thanks</a>
+
+    <div class="popup" id="thanks">
+      <h4>Спасибо</h4>
+      <p class="green">В ближайшее время с Вами свяжется наш специалист.</p>
+    </div>
+
+    <div class="popup br_10" id="select">
+      <h4>Укажите телефон<br> и мы Вам<br> перезвоним</h4>
+      <form action="send.php" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" class="input_text" required="required">
+        <input type="text" name="phone" placeholder="Номер телефона" class="input_text">
+        <input type="hidden" name="count_area" value="1">
+        <input type="hidden" name="sqd" value="">
+        <input type="hidden" name="price" value="">
+        <input type="hidden" name="form" value="Подбобрать квартиру">
+        <input type="submit" class="btn" value="Отправить" name="submit">
+      </form>
+    </div>
+
+
+    <div class="popup br_10" id="session">
+      <h4>Укажите телефон<br>и Ваше имя,<br>и мы Вас пригласим</h4>
+      <form action="send.php" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" class="input_text">
+        <input type="text" name="phone" placeholder="Номер телефона" class="input_text">
+        <input type="hidden" name="form" value="Записаться на экскурсию">
+        <input type="submit" class="btn" value="Отправить" name="submit">
+      </form>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -5,13 +5,13 @@ require 'PHPMailer/PHPMailerAutoload.php';
 // ==== Принудительный захват массива переменных ==========================
 // ==== раскомментировать, если письма отправляются без значений полей ====
 $text       = '';
-$adminEmail = 'otoplenie.nsk54@gmail.com';
+$adminEmail = 'kacevnik@yandex.ru';
 $email      = $_POST['email'];     		if($email){$text      = 'E-mail пользователя: '.$email.'<br>';}
 $phone      = $_POST['phone'];     		if($phone){$text      = $text.'Телефон пользователя: '.$phone.'<br>';}
 $name       = $_POST['name'];     		if($name){$text       = $text.'Имя пользователя: '.$name.'<br>';}
-$home       = $_POST['home'];       	if($home){$text       = $text.'Тип объекта: '.$home.'<br>';}
-$fuel       = $_POST['fuel'];       	if($fuel){$text       = $text.'Способ отопления: '.$fuel.'<br>';}
-$kvadratura = $_POST['kvadratura'];     if($kvadratura){$text = $text.'Площадь помещения: '.$kvadratura.'<br>';}
+$count_area = $_POST['count_area'];     if($count_area){$text = $text.'Количество комнат: '.$count_area.'<br>';}
+$sqd        = $_POST['sqd'];       	    if($sqd){$text        = $text.'Площадь: '.$sqd.'<br>';}
+$price      = $_POST['price'];          if($price){$text      = $text.'Стоимость: '.$price.'<br>';}
 $form       = $_POST['form'];
 
 
