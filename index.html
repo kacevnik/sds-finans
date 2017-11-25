@@ -98,25 +98,6 @@
                 <span class="active">1</span>
                 <span>2</span>
                 <span>3</span>
-                <span>4</span>
-              </div>
-              <div class="item sqd">
-                <div class="title">Метраж квартиры</div>
-                <div class="check_sqd">
-                  <form action="">
-                    <span>
-                      <input type="checkbox" id="check_sqd_100" value="100">
-                      <label for="check_sqd_100">100 м<sup>2</sup></label><br>
-                      <input type="checkbox" value="120" id="check_sqd_120">
-                      <label for="check_sqd_120">120 м<sup>2</sup></label>
-                    </span>
-                    <span>
-                      <input type="checkbox" value="140" id="check_sqd_140">
-                      <label for="check_sqd_140">140 м<sup>2</sup></label><br>
-                      <input type="checkbox" value="160" id="check_sqd_160">
-                      <label for="check_sqd_160">160 м2<sup>2</sup></label>
-                    </span>
-                </div>
               </div>
               <div class="item price">
                 <div class="title">Цена на квартиру</div>
@@ -372,10 +353,10 @@
               </div>
               <div class="col-md-3">
                 <select name="bank">
-                  <option value="0" selected="">Выберите банк</option>
-                  <option value="1">ВТБ Банк</option>
-                  <option value="2">Сбербанк</option>
-                  <option value="3">Альфа-банк</option>
+                  <option value="Выберите банк" checked="checked">Выберите банк</option>
+                  <option value="ВТБ Банк">ВТБ Банк</option>
+                  <option value="Сбербанк">Сбербанк</option>
+                  <option value="Альфа-банк">Альфа-банк</option>
                 </select>
               </div>
               <div class="col-md-3 col-md-offset-3">
@@ -385,6 +366,7 @@
                 <input type="text" placeholder="Введите телефон" name="phone" class="input_text">
               </div>
               <div class="col-xs-12">
+                <input type="hidden" name="form" value="Подбор банка для ипотеки">
                 <input type="submit" name="submit" value="Получить расчет ипотеки" class="btn btn_med">
               </div>
             </form>

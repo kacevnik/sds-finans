@@ -85,10 +85,11 @@ header{
 
 .top_menu{
     list-style: none;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
     padding: 0;
-    line-height: 1.8;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 .top_menu a{
@@ -164,7 +165,7 @@ header{
     background: #fff;
     padding: 45px;
     margin: 0 5%;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 18px;
     color: #000;
 }

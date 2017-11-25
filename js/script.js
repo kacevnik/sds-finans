@@ -58,18 +58,18 @@ jQuery(document).ready(function ($) {
 
   $( "#slider-range" ).slider({
       range: true,
-      min: 0,
-      max: 5000000,
-      step: 1000,
-      values: [ 1000000, 2500000 ],
+      min: 1500,
+      max: 4500,
+      step: 100,
+      values: [ 2000, 3600 ],
       slide: function( event, ui ) {
-        $( "#slider_price_left" ).html('от ' + ui.values[ 0 ]);
-        $( "#slider_price_right" ).html('до ' + ui.values[ 1 ]);
+        $( "#slider_price_left" ).html('от ' + ui.values[ 0 ] + ' тыс.');
+        $( "#slider_price_right" ).html('до ' + ui.values[ 1 ] + ' тыс.');
         $('#select input[name="price"]').val('от ' + ui.values[ 0 ] + ' до ' + ui.values[ 1 ]);
       }
     });
-    $( "#slider_price_left" ).html('от ' + $( "#slider-range" ).slider( "values", 0 ));
-    $( "#slider_price_right" ).html('до ' + $( "#slider-range" ).slider( "values", 1 ));
+    $( "#slider_price_left" ).html('от ' + $( "#slider-range" ).slider( "values", 0 ) + ' тыс.');
+    $( "#slider_price_right" ).html('до ' + $( "#slider-range" ).slider( "values", 1 ) + ' тыс.');
     $('#select input[name="price"]').val('от ' + $( "#slider-range" ).slider( "values", 0 ) + ' до ' + $( "#slider-range" ).slider( "values", 1 ));
 
   	//Маска под телефонный номер для поля Input
