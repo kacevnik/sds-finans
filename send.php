@@ -16,6 +16,7 @@ $summa      = $_POST['summa'];          if($summa){$text      = $text.'Жела�
 $vnos       = $_POST['vnos'];           if($vnos){$text       = $text.'Первоначальный взнос для ипотеки: '.$vnos.'<br>';}
 $time       = $_POST['time'];           if($time){$text       = $text.'Срок ипотеки для ипотеки: '.$time.'<br>';}
 $bank       = $_POST['bank'];           if($bank){$text       = $text.'Банк: '.$bank.'<br>';}
+$otdelka    = $_POST['otdelka'];        if($otdelka){$text    = $text.'Отделка квартиры: '.$otdelka.'<br>';}
 $form       = $_POST['form'];
 
 

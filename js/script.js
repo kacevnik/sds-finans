@@ -61,8 +61,9 @@ jQuery(document).ready(function ($) {
       min: 1500,
       max: 4500,
       step: 100,
-      values: [ 2000, 3600 ],
+      values: [ 1500, 4500 ],
       slide: function( event, ui ) {
+        reloadVolume(ui.values[ 0 ], ui.values[ 1 ]);
         $( "#slider_price_left" ).html('от ' + ui.values[ 0 ] + ' тыс.');
         $( "#slider_price_right" ).html('до ' + ui.values[ 1 ] + ' тыс.');
         $('#select input[name="price"]').val('от ' + ui.values[ 0 ] + ' до ' + ui.values[ 1 ]);
@@ -135,10 +136,54 @@ function init () {
  
 }
 
+function reloadHHome(){
+   var i = 0;
+      var text = '';
+      $('.planirovki_hide .item').each(function(index, el) {
+        if(i == 0){text = text + '<div class="row">';}
+        if($(this).attr('data-count') == 1 && $('span[data-span="1"]').hasClass('active')){
+          text = text + '<div class="col-md-6">' + $(this).parent().html() + '</div>';
+          i++;
+        }        
+        if($(this).attr('data-count') == 2 && $('span[data-span="2"]').hasClass('active')){
+          text = text + '<div class="col-md-6">' + $(this).parent().html() + '</div>';
+          i++;
+        }        
+        if($(this).attr('data-count') == 3 && $('span[data-span="3"]').hasClass('active')){
+          text = text + '<div class="col-md-6">' + $(this).parent().html() + '</div>';
+          i++;
+        }
+        if(i == 2){text = text + '</div>'; i = 0;}
+      });
+      text = text + '</div>';
+      text.replace(/<\/div><\/div><\/div>/g,"</div></div>");
+      $('#mCSB_1_container').html(text);
+}
+
+function reloadVolume(min, max){
+  var i = 0;
+  var text = '';
+  $('.planirovki_hide .item').each(function(index, el) {
+    if(i == 0){text = text + '<div class="row">';}
+    if($(this).attr('data-price') > min && $(this).attr('data-price') < max){
+      text = text + '<div class="col-md-6">' + $(this).parent().html() + '</div>';
+      i++;
+    }        
+    if(i == 2){text = text + '</div>'; i = 0;}
+  });
+  text = text + '</div>';
+  text.replace(/<\/div><\/div><\/div>/g,"</div></div>");
+  $('#mCSB_1_container').html(text);
+}
+
   $('.count_area span').click(function(event) {
-    $('.count_area span').removeClass('active');
-    $(this).addClass('active');
-    $('#select input[name="count_area"]').val($(this).html());
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+      reloadHHome();
+    }else{
+      $(this).addClass('active');
+      reloadHHome();
+    }
   });
 
   $('.check_sqd input[type="checkbox"]').click(function(event) {
