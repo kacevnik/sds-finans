@@ -894,6 +894,19 @@ header{
     margin-bottom: 10px;
 }
 
+.form_pdf{
+    text-align: center;
+}
+
+.form_pdf input{
+    width: 75%;
+}
+
+.form_pdf input[name="phone"]{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 
 
 

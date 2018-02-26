@@ -9,7 +9,11 @@ jQuery(document).ready(function ($) {
     $("#thanks_link").trigger("click");
 	});
 
-
+    $('.form_pdf input[name="submit"]').click(function(event) {
+      if($('.form_pdf input[name="phone"]').val() != '' && $('.form_pdf input[name="phone"]').val() != ' '){
+        window.open("/img/data/press.pdf");
+      }
+    });
 
     //Иницилизация и настройка Галереи-Слайдера OWL-carusel
     $("#bank_slider").owlCarousel({

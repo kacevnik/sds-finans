@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>СДС Финанс</title>
+    <title>Жилой комплекс Венеция - Новосибирск</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -46,7 +46,7 @@
           <div class="col-md-3">
             <div class="top_phone">
               Круглосуточная горячая линия<br>
-              <span>+7 383 220 20 20</span>
+              <span>+7 383 359 72 59</span>
             </div>
           </div>
           <div class="col-md-3 call_back_container">
@@ -79,7 +79,7 @@
                 <form action="send.php" method="post">
                   <input type="text" placeholder="Введите телефон" name="phone" required="required" class="input_text">
                   <input type="hidden" placeholder="Введите телефон" name="form" value="Запишись на экскурсию в шоу-рум прямо сейчас">
-                  <input type="submit" name="submit" class="btn br_2">
+                  <input type="submit" name="submit" class="btn br_2" onclick="yaCounter47038047.reachGoal('ecs'); return true;">
                 </form>
               </div>
             </div>
@@ -110,10 +110,10 @@
               </div>
               <div class="item manager">
                 <div class="manager_img">
-                  <img src="img/temp/meneger.png" alt="Эксперт ЖК «Венеция»">
+                  <img src="img/temp/meneger_2.jpg" alt="Эксперт ЖК «Венеция»">
                 </div>
-                <div class="title">Станислав<br>Эксперт ЖК «Венеция»</div>
-                <div class="manager_text">Нажмите на кнопку и эксперт проекта за 25 минут бесплатно подберет вам 2-5 подходящих жилых комплекса</div>
+                <div class="title">Наталья<br>Эксперт ЖК «Венеция»</div>
+                <div class="manager_text">Нажмите на кнопку и эксперт проекта за 25 минут бесплатно подберет вам 2-3 подходящих варианта</div>
                 <a class="btn" data-fancybox data-src="#select" href="javascript:;">Подобрать вариант</a>
               </form>
               </div>
@@ -423,8 +423,12 @@
           <div class="col-md-4 presentation_text">
             <p>Расположение жилого 
 комплекса, планируемые очереди, инфраструктура отзывы владельцев, планировки и цены на квартиры в жилом комплексе «Венеция» в нашей презентации.</p>
-            <a href="img/data/press.pdf" target="_blank" class="btn btn_med br_5">
-              <i class="fa fa-download"></i>Скачать презентацию</a>
+            <form method="post" action="send.php" class="form_pdf">
+              <input type="text" name="phone" placeholder="Номер телефона" class="input_text" required="required"><br>
+              <input type="hidden" name="form" value="Скачать презентацию">
+              <input type="submit" class="btn" value="Скачать презентацию" name="submit" onclick="yaCounter47038047.reachGoal('download'); return true;">
+              <a href="/img/data/press.pdf" style="display: none;" download="download" id="form_pdf">Скачать</a>
+            </form>
           </div>
           <div class="col-md-8"><img src="img/temp/presentation.png" alt=""></div>
         </div>
@@ -475,21 +479,21 @@
           <!--****** Желательный размер картинок 482х316 px ******-->
           <div id="dg-container" class="dg-container">
             <div class="dg-wrapper">
-              <a data-fancybox href="https://www.youtube.com/watch?v=m96XcFwSUpg" class="br_5">
+              <a data-fancybox href="https://www.youtube.com/watch?v=rLic4hgD5tA" class="br_5">
                 <img src="img/temp/slide.png" alt="image01">
                 <div class="bg_fon"></div>
                 <span class="dg_video">
                   <i class="fa fa-play-circle-o"></i>
                 </span>
-              </a>              
-              <a data-fancybox href="https://www.youtube.com/watch?v=m96XcFwSUpg" class="br_5">   
+              </a>
+              <a data-fancybox href="https://www.youtube.com/watch?v=rLic4hgD5tA" class="br_5">   
                 <img src="img/temp/slide.png" alt="image01">
                 <div class="bg_fon"></div> 
                 <span class="dg_video">
                   <i class="fa fa-play-circle-o"></i>
                 </span>
-              </a>              
-              <a data-fancybox href="https://www.youtube.com/watch?v=m96XcFwSUpg" class="br_5">
+              </a>
+              <a data-fancybox href="https://www.youtube.com/watch?v=rLic4hgD5tA" class="br_5">
                 <img src="img/temp/slide.png" alt="image01">
                 <div class="bg_fon"></div>
                 <span class="dg_video">
@@ -567,7 +571,7 @@
               </div>
               <div class="col-xs-12">
                 <input type="hidden" name="form" value="Подбор банка для ипотеки">
-                <input type="submit" name="submit" value="Получить расчет ипотеки" class="btn btn_med">
+                <input type="submit" name="submit" value="Получить расчет ипотеки" class="btn btn_med" onclick="yaCounter47038047.reachGoal('ipoteka'); return true;">
               </div>
             </form>
           </div>
@@ -668,7 +672,7 @@
           <div class="col-md-3">
             <div class="top_phone">
               Круглосуточная горячая линия<br>
-              <span>+7 383 220 20 20</span>
+              <span>+7 383 359 72 59</span>
             </div>
           </div>
           <div class="col-md-3 call_back_container">
@@ -699,7 +703,7 @@
       <form action="send.php" method="post">
         <input type="text" name="phone" placeholder="Номер телефона" class="input_text">
         <input type="hidden" name="form" value="Перезвоните мне!">
-        <input type="submit" class="btn" value="Отправить" name="submit">
+        <input type="submit" class="btn" value="Отправить" name="submit" onclick="yaCounter47038047.reachGoal('call-back'); return true;">
       </form>
     </div>
 
@@ -719,7 +723,7 @@
         <input type="hidden" name="sqd" value="">
         <input type="hidden" name="price" value="">
         <input type="hidden" name="form" value="Подбобрать квартиру">
-        <input type="submit" class="btn" value="Отправить" name="submit">
+        <input type="submit" class="btn" value="Отправить" name="submit" onclick="yaCounter47038047.reachGoal('podbor'); return true;">
       </form>
     </div>
 
@@ -730,7 +734,7 @@
         <input type="text" name="name" placeholder="Ваше имя" class="input_text">
         <input type="text" name="phone" placeholder="Номер телефона" class="input_text">
         <input type="hidden" name="form" value="Записаться на экскурсию">
-        <input type="submit" class="btn" value="Отправить" name="submit">
+        <input type="submit" class="btn" value="Отправить" name="submit" onclick="yaCounter47038047.reachGoal('zapis'); return true;">
       </form>
     </div>    
 
@@ -1136,7 +1140,35 @@
           </form>
       </div>
     </div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter47038047 = new Ya.Metrika({
+                    id:47038047,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
 
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47038047" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
